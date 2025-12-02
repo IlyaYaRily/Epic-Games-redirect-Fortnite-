@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Launching Fortnite via Epic Games...</title>
+    <script>
+        // URL-схема для запуска Fortnite
+        var launchUrl = "com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true";
+
+        // Попытка автоматического запуска через JavaScript
+        window.location.href = launchUrl;
+
+        // Запасной вариант на случай блокировки
+        setTimeout(function() {
+            var manualLink = document.getElementById('manualLink');
+            if (manualLink) {
+                manualLink.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>Launching Fortnite...</h1>
+    <p>Please wait or confirm the prompt from your browser.</p>
+    
+    <p id="manualLink" style="display:none;">
+        If it doesn't open, 
+        <a href="com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true">click here to launch manually</a>.
+    </p>
+</body>
+</html>
